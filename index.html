@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .correct {
+            color: #FF5722;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SQL Quiz</h1>
+
+<div class="question">
+    <strong>1. ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ SQL Query ລຸ່ມນີ້ແມ່ນໃຊ້ໄວ້ເຮັດຫຍັງ:</strong>
+    <pre><code>SELECT name FROM employees WHERE department = 'Marketing';</code></pre>
+    <ul>
+        <li>A) ດຶງເອົາຊື່ຂອງພະນັກງານທັງຫມົດ</li>
+        <li class="correct">B) ດຶງເອົາຊື່ພະນັກງານຈາກພະແນກການຕະຫຼາດ</li>
+        <li>C) ດຶງເອົາຊື່ຂອງພະນັກງານຈັດຮຽງຕາມຕົວອັກສອນ</li>
+        <li>D) ດຶງເອົາຊື່ພະນັກງານຈາກພະແນກໄອທີ</li>
+    </ul>
+</div>
+
+<div class="question">
+    <strong>2. ຈົ່ງເລືອກຜົນລັບທີ່ຖືກຕ້ອງຂອງ SQL Query ລຸ່ມນີ້ (ຊື່ຖານຂໍ້ມູນແມ່ນ student):</strong>
+    <pre><code>SELECT COUNT(*) FROM students;</code></pre>
+    <ul>
+        <li>A) 0</li>
+        <li>B) 1</li>
+        <li>C) 2</li>
+        <li class="correct">D) 3</li>
+    </ul>
+</div>
+
+<div class="question">
+    <strong>3. ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ, ຈະໄດ້ຫຍັງຈາກ SQL query ລຸ່ມນີ້:</strong>
+    <pre><code>SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department;</code></pre>
+    <ul>
+        <li>A) ເງິນເດືອນທັງໝົດຂອງແຕ່ລະພະແນກ</li>
+        <li>B) ເງິນເດືອນສູງສຸດຂອງແຕ່ລະພະແນກ</li>
+        <li>C) ເງິນເດືອນຕໍາ່ສຸດທີ່ແຕ່ລະພະແນກ</li>
+        <li class="correct">D) ເງິນເດືອນສະເລ່ຍຂອງແຕ່ລະພະແນກ</li>
+    </ul>
+</div>
+
+<div class="question">
+    <strong>4. ຈົ່ງສັງເກດເບິ່ງຕາຕະລາງ ທັງສອງຕາຕະລາງດັ່ງລຸ່ມນີ້ ແລ້ວເລືອກ SQL Query ເພື່ອ ຊອກຫາຈໍານວນການຂາຍທັງໝົດສໍາລັບພະນັກງານແຕ່ລະຄົນໃນພະແນກການຂາຍ:</strong>
+    <pre><code>SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.name;</code></pre>
+    <ul>
+        <li>A) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</li>
+        <li class="correct">B) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e LEFT JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.name;</li>
+        <li>C) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e INNER JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</li>
+        <li>D) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.id;</li>
+    </ul>
+</div>
+
+<div class="question">
+    <strong>5. ຄໍາສັ່ງ SQL Query ໃດໃນຕົວເລືອກລຸ່ມນີ້ ທີ່ໃຊ້ເພື່ອ ເພີ່ມຖັນໃໝ່ທີ່ມີຊື່ (age) ໃສ່ຕາຕະລາງທີ່ມີຊື່ (students):</strong>
+    <ul>
+        <li class="correct">A) ALTER TABLE students ADD COLUMN age INT;</li>
+        <li>B) UPDATE TABLE students SET COLUMN age INT;</li>
+        <li>C) ADD COLU
