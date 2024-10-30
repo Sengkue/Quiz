@@ -3,87 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .correct {
-            color: #FF5722;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+    <title>SQL Questions</title>
 </head>
 <body>
-
-<h1>SQL Quiz</h1>
-
-<div class="question">
-    <strong>1. ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ SQL Query ລຸ່ມນີ້ແມ່ນໃຊ້ໄວ້ເຮັດຫຍັງ:</strong>
-    <pre><code>SELECT name FROM employees WHERE department = 'Marketing';</code></pre>
+    <h1>ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ SQL Query ລຸ່ມນີ້ແມ່ນໃຊ້ໄວ້ເຮັດຫຍັງ:</h1>
+    <pre>sql
+SELECT name FROM employees WHERE department = 'Marketing';
+</pre>
     <ul>
         <li>A) ດຶງເອົາຊື່ຂອງພະນັກງານທັງຫມົດ</li>
-        <li class="correct">B) ດຶງເອົາຊື່ພະນັກງານຈາກພະແນກການຕະຫຼາດ</li>
+        <li>B) ດຶງເອົາຊື່ພະນັກງານຈາກພະແນກການຕະຫຼາດ</li>
         <li>C) ດຶງເອົາຊື່ຂອງພະນັກງານຈັດຮຽງຕາມຕົວອັກສອນ</li>
         <li>D) ດຶງເອົາຊື່ພະນັກງານຈາກພະແນກໄອທີ</li>
     </ul>
-</div>
 
-<div class="question">
-    <strong>2. ຈົ່ງເລືອກຜົນລັບທີ່ຖືກຕ້ອງຂອງ SQL Query ລຸ່ມນີ້ (ຊື່ຖານຂໍ້ມູນແມ່ນ student):</strong>
-    <pre><code>SELECT COUNT(*) FROM students;</code></pre>
+    <h2>ຈົ່ງເລືອກຜົນລັບທີ່ຖືກຕ້ອງຂອງ SQL Query ລຸ່ມນີ້ (ຊື່ຖານຂໍ້ມູນແມ່ນ student):</h2>
+    <pre>sql
+SELECT COUNT(*) FROM students;
+</pre>
     <ul>
         <li>A) 0</li>
         <li>B) 1</li>
         <li>C) 2</li>
-        <li class="correct">D) 3</li>
+        <li>D) 3</li>
     </ul>
-</div>
 
-<div class="question">
-    <strong>3. ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ, ຈະໄດ້ຫຍັງຈາກ SQL query ລຸ່ມນີ້:</strong>
-    <pre><code>SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department;</code></pre>
+    <h2>ຈົ່ງເລືອກຄໍາຕອບທີ່ຖືກຕ້ອງ, ຈະໄດ້ຫຍັງຈາກ Sql query ລຸ່ມນີ້:</h2>
+    <pre>sql
+SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department;
+</pre>
     <ul>
         <li>A) ເງິນເດືອນທັງໝົດຂອງແຕ່ລະພະແນກ</li>
         <li>B) ເງິນເດືອນສູງສຸດຂອງແຕ່ລະພະແນກ</li>
         <li>C) ເງິນເດືອນຕໍາ່ສຸດທີ່ແຕ່ລະພະແນກ</li>
-        <li class="correct">D) ເງິນເດືອນສະເລ່ຍຂອງແຕ່ລະພະແນກ</li>
+        <li>D) ເງິນເດືອນສະເລ່ຍຂອງແຕ່ລະພະແນກ</li>
     </ul>
-</div>
 
-<div class="question">
-    <strong>4. ຈົ່ງສັງເກດເບິ່ງຕາຕະລາງ ທັງສອງຕາຕະລາງດັ່ງລຸ່ມນີ້ ແລ້ວເລືອກ SQL Query ເພື່ອ ຊອກຫາຈໍານວນການຂາຍທັງໝົດສໍາລັບພະນັກງານແຕ່ລະຄົນໃນພະແນກການຂາຍ:</strong>
-    <pre><code>SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.name;</code></pre>
+    <h2>ຈົ່ງສັງເກດເບິ່ງຕາຕະລາງ ທັງສອງຕາຕະລາງດັ່ງລຸ່ມນີ້ ແລ້ວເລືອກ SQL Query ເພື່ອ ຊອກຫາຈໍານວນການຂາຍທັງໝົດສໍາລັບພະນັກງານແຕ່ລະຄົນໃນພະແນກການຂາຍ:</h2>
+    <pre>sql
+Table: employees
++----+----------+------------+
+| id |   name   | department |
++----+----------+------------+
+|  1 |  John    |   Sales    |
+|  2 |  Alice   |   Marketing|
+|  3 |  Bob     |   Sales    |
++----+----------+------------+
+
+Table: sales
++----+-----------+---------+
+| id |  employee_id | amount |
++----+-----------+---------+
+|  1 |     1     |   1000  |
+|  2 |     3     |   1500  |
+|  3 |     1     |   2000  |
++----+-----------+---------+
+</pre>
     <ul>
-        <li>A) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</li>
-        <li class="correct">B) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e LEFT JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.name;</li>
-        <li>C) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e INNER JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</li>
-        <li>D) SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.id;</li>
+        <li>A) <pre>sql SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</pre></li>
+        <li>B) <pre>sql SELECT e.name, SUM(s.amount) AS total_sales FROM employees e LEFT JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.name;</pre></li>
+        <li>C) <pre>sql SELECT e.name, SUM(s.amount) AS total_sales FROM employees e INNER JOIN sales s ON e.id = s.employee_id GROUP BY e.name;</pre></li>
+        <li>D) <pre>sql SELECT e.name, SUM(s.amount) AS total_sales FROM employees e JOIN sales s ON e.id = s.employee_id WHERE e.department = 'Sales' GROUP BY e.id;</pre></li>
     </ul>
-</div>
 
-<div class="question">
-    <strong>5. ຄໍາສັ່ງ SQL Query ໃດໃນຕົວເລືອກລຸ່ມນີ້ ທີ່ໃຊ້ເພື່ອ ເພີ່ມຖັນໃໝ່ທີ່ມີຊື່ (age) ໃສ່ຕາຕະລາງທີ່ມີຊື່ (students):</strong>
+    <h2>ຄໍາສັ່ງ SQL Query ໃດໃນຕົວເລືອກລຸ່ມນີ້ ທີ່ໃຊ້ເພື່ອ ເພີ່ມຖັນໃໝ່ທີ່ມີຊື່ (age) ໃສ່ຕາຕະລາງທີ່ມີຊື່ (students)</h2>
     <ul>
-        <li class="correct">A) ALTER TABLE students ADD COLUMN age INT;</li>
-        <li>B) UPDATE TABLE students SET COLUMN age INT;</li>
-        <li>C) ADD COLU
+        <li>A) <pre>ALTER TABLE students ADD COLUMN age INT;</pre></li>
+        <li>B) <pre>UPDATE TABLE students SET COLUMN age INT;</pre></li>
+        <li>C) <pre>ADD COLUMN age INT TO students;</pre></li>
+        <li>D) <pre>MODIFY TABLE students ADD COLUMN age INT;</pre></li>
+    </ul>
+
+    <h2>ຄໍາສັ່ງໃດຕໍ່ໄປນີ້ ໃຊ້ເພື່ອແກ້ໄຂ department ຂອງ employee ທີ່ມີ ID = 101 ເປັນ “Finance” ?</h2>
+    <ul>
+        <li>A) <pre>UPDATE employees SET department = 'Finance' WHERE id = 101;</pre></li>
+        <li>B) <pre>UPDATE employees SET department = 'Finance' WHERE employee_id = 101;</pre></li>
+        <li>C) <pre>MODIFY employees SET department = 'Finance' WHERE id = 101;</pre></li>
+        <li>D) <pre>ALTER employees SET department = 'Finance' WHERE id = 101;</pre></li>
+    </ul>
+
+    <h2>ຈົ່ງຊອກຫາຜົນລັບທີ່ຖືກຕ້ອງຂອງ SQL Query ດັ່ງລຸ່ມນີ້:</h2>
+    <pre>sql
+SELECT * FROM students WHERE age > 18;
+</pre>
+    <ul>
+        <li>A) ດຶງທຸກບັນທຶກຂອງນັກຮຽນທີ່ອາຍຸ 18 ປີ</li>
+        <li>B) ດຶງທຸກບັນທຶກຂອງນັກຮຽນທີ່ອາຍຸມາກກວ່າ 18 ປີ</li>
+        <li>C) ດຶງບັນທຶກທີ່ທັງໝົດຂອງນັກຮຽນທີ່ອາຍຸບໍ່ເທົ່າ 18 ປີ</li>
+        <li>D) ດຶງທຸກບັນທຶກຂອງນັກຮຽນທີ່ອາຍຸນ້ອຍກວ່າ 18 ປີ</li>
+    </ul>
+</body>
+</html>
